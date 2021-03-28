@@ -2,9 +2,10 @@
 Title: Exercise 2.4
 Author: Travis Rosen
 Date: 3/28/2021
-Description: 
+Description: This page will access EJS files and display them on a node server.
 */
 
+//Require statements for express, http, and path.
 var express = require("express");
 var http = require("http");
 var path = require("path");
