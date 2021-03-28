@@ -15,7 +15,7 @@ var app = express ();
 app.set("views", path.resolve(__dirname, "views"));
 //This will tell Express to use the EJS view engine. 
 app.set("view engine", "ejs");
-
+//This is the data that will be pulled from the EJS page.
 app.get("/", function(req, res){
     res.render("index.ejs", {
         firstName: "Travis",
@@ -24,7 +24,7 @@ app.get("/", function(req, res){
         
     });
 });
-
+//This will create the server on localhost:8080
 http.createServer(app).listen(8080, function(){
     console.log("EJS-Views app started on port 8080.");
 });
