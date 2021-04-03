@@ -14,7 +14,7 @@ var logger = require('morgan');
 var app = express();
 
 //Telling express to look in the views folder for any files. 
-app.set('views', path.resolve(__dirname, 'views'))
+app.set('views', path.resolve(__dirname, 'views'));
 //Telling express to use the ejs view engine.
 app.set('view engine', 'ejs');
 //Adding the logger.

@@ -1,0 +1,38 @@
+<!--
+Title: Index.ejs
+Author: Travis Rosen
+Date: 4/3/2021
+Description: This is the index.ejs.
+-->
+
+<!--This page is set up using bootstrap.-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+    <body>
+        <!--Nav-bar template.-->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <ul class="navbar">
+                <li class="nav-item active">
+                  <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <!--Div class that will display message from the js file.-->
+        <div class="container" role="main">
+            <br><br>
+            Product ID: <%= productId %>
+        </div>
+    </body>
+</html>
