@@ -5,10 +5,9 @@ Date: 4/11/2021
 Description: JavaScript page for 4.2
 */
 
-//Require statements for express, http, logger and path.
+//Require statements for express, http, and logger.
 var express = require('express');
 var http = require('http');
-var path = require('path');
 var logger = require('morgan');
 
 var app = express();
