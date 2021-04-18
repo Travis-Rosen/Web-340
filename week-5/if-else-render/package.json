@@ -1,0 +1,9 @@
+{
+    "name": "if-else-render",
+    "author": "Travis Rosen",
+    "private": "true",
+    "dependencies": {
+        "ejs": "^3.1.6",
+        "express": "^4.17.1"
+    }
+}
