@@ -9,8 +9,8 @@ app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(logger('short'));
 
-app.get('/', function(res, res){
-    res.prependListener('index', {
+app.get('/', function(req, res){
+    res.render('index', {
         title:"Home page"
     });
 });
