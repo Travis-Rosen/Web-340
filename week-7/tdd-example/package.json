@@ -1,0 +1,10 @@
+{
+    "name": "tdd-example",
+    "author": "Travis Rosen",
+    "private": "true",
+    "scripts": {"test": "mocha"},
+    "dependencies": {
+        "chai": "^4.3.4",
+        "mocha": "^8.3.2"
+    }
+}
