@@ -10,20 +10,20 @@ var cookieParser = require('cookie-parser');
 var csrf = require ('csurf');
 var mongoose = require("mongoose");
 
-
+//App statements
 var app = express();
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(logger('short'));
 app.set('port', process.env.PORT || 8080);
 app.use(helmet.xssFilter());
-
+//Csrf 
 var csrfProtection = csrf({cookie:true});
 
 app.use(bodyParser.urlencoded({
     extended:true
 }));
-
+//app.use
 app.use(cookieParser());
 app.use(csrfProtection);
 app.use(function(req, res, next) {
@@ -32,14 +32,14 @@ app.use(function(req, res, next) {
     res.locals.csrfToken = token;
     next();
 });
-
+//Get function
 app.get("/", function(req, res) {
     res.render("index", {
         message: "XSS Prevention Example"
     });
 });
 
-
+//Creating mongo instance
 const mongoDB = 'mongodb+srv://tmrosen:tmrosen@buwebdev-cluster-1.azoni.mongodb.net/test';
 mongoose.connect(mongoDB, {
     useMongoClient: true
@@ -52,13 +52,13 @@ const db = mongoose.connection;
 });
 
 
-
+//Get function for homepage
 app.get("/", function (req, res) {
     res.render("index", {
         title: "Home page"
     });
 });
-
+//Entry page for new employee
 app.get('/new', function(req, res){
     res.render("new", {
         title: "New Entry",
@@ -66,7 +66,7 @@ app.get('/new', function(req, res){
         
     });
 });
-
+//Process request
 app.post("/process", function(req, res) {
     if (!req.body.firstName) {
         res.status(404).send('Entries must have a name.');
@@ -97,7 +97,7 @@ app.post("/process", function(req, res) {
     });
 });
 
-
+//Listing display
 app.get("/list", function(req, res) {
     Employee.find({}, function(error, employees) {
         if (error) throw error;
