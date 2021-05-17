@@ -2,6 +2,8 @@
     "name": "ems",
     "author": "Travis Rosen",
     "private": "true",
+    "scripts": {"start": "node app.js"},
+    "engines": {"node": "<yourNodeVersion>"},
     "dependencies": {
         "body-parser": "^1.19.0",
         "cookie-parser": "^1.4.5",
